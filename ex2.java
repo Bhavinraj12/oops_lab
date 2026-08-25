@@ -11,7 +11,14 @@ class currencyconvertor
        system.out.println("enter amount in rupees");
        rupee=sc.nextfloat();
        euro=rupee/80;
-       system.out.println("euro:"+f.format(rupee"));
+       system.out.println("euro:"+f.format(euro"));
+    {
+    public converteurotoinr()
+    {
+       system.out.println("enter amount in euro);
+       euro=sc.nextfloat();
+       rupee=euro*80;
+       system.out.println("rupees:"+f.format(rupee));
     }
     public convertinttodollar()
     {
@@ -22,7 +29,7 @@ class currencyconvertor
     }
     public convertdollartoinr()
     {
-        system.out.println("enter amount in dollar");
+        system.out.println("enter amount in dollar");s
         dollar=sc.nextfloat();
         rupee=dollar*66;
         system.out.println("rupee;"+f.format(rupee))
@@ -135,9 +142,64 @@ public class convert
                 convertinrtoeuro();
                 converteurotoinr()    
             }
-            else if(currency)
-
-
-        
+            else if(currency_code==2)
+            {
+                converminutetodollar();
+                convertdollartoinr();
+            }
+            else if(currency_code==3)
+            {
+                convertinrtoyen();
+                convertyentoinr();
+            }
+        else
+            {
+             system.out.println("invalid code");
+            }
+        }
+        else if(code==2)
+        {
+            system.out.println("enter the distance code 1:meter\n2:miles");
+            distance_code=sc.nextint();
+            if(distance_code==1)
+            {
+                convertmetertokm();
+                convertkmtometer();
+            }
+            else if(distance_code==2)
+            {
+                convertmilestokm();
+                convertkmtomiles():
+            }
+            else
+            {
+                system.out.println("invalid code");
+            }
+        }
+        else if(code==3)
+        {
+            system.out.println("enter the time code 1:minutes\n2:seconds");
+            time_code=sc.nextinr();
+            if(time_code==1)
+            {
+                converthourtominutes();
+                convertminutestohour();
+            }
+            else if(time_code==2)
+            {
+                converthourtoseconds();
+                convertsecondstohour();
+            }
+            else
+            {
+                system.out.println("invalid code");
+            }
+        }
+        else
+        {
+            system.out.println("invalid code");
+        }
+    }
+} 
 
   
